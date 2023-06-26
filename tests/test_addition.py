@@ -2,8 +2,8 @@
 from src.calculator import  add
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-from selenium.webdriver import Edge
-driver = webdriver.Edge()
+from webdriver_manager.chrome import ChromeDriverManager
+driver = webdriver.chrome(ChromeDriverManager().install())
 import pytest
 import time
 
