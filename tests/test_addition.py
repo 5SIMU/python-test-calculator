@@ -6,6 +6,8 @@ from selenium.webdriver import Firefox
 driver = webdriver.Firefox()
 import pytest
 import time
+
+
 def test_add():
     result = add(3, 4)
     assert result == 7
@@ -14,7 +16,7 @@ def test_add_string():
         add("string", 4)
 def test_SMDB():
     driver.get('https://test-outsystems.de.bosch.com/SensorTrackingMetaData_Solution/')
-    time.sleep(5)
+    time.sleep(10)
     driver.find_element(By.XPATH,'//*[@role="menuitem" and text()="Treatments"]').click()
     time.sleep(5)
     driver.quit()
