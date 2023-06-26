@@ -2,8 +2,8 @@
 from src.calculator import  add
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-from selenium.webdriver import Firefox
-driver = webdriver.Firefox()
+from selenium.webdriver import Edge
+driver = webdriver.Edge()
 import pytest
 import time
 
