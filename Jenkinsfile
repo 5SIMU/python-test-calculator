@@ -1,27 +1,17 @@
 pipeline {
     agent any
- 
-    stages {
-        stage('Test') {
+    stages{
+        stage('version') {
             steps {
-                bat "mvn -D clean test"
-            }
- 
-            post {                
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                   publishHTML([
-                       allowMissing: false, 
-                       alwaysLinkToLastBuild: false, 
-                       keepAll: false, 
-                       reportDir: 'target/surefire-reports/', 
-                       reportFiles: 'emailable-report.html', 
-                       reportName: 'HTML Report', 
-                       reportTitles: '', 
-                       useWrapperFileDirectly: true])
-                }
+                sh 'python3 --version'
             }
         }
+        stage("Test Simo") {
+            steps {
+                sh 'python3 tests/test_addition.py'
+            }
+            
+        }
     }
+    
 }
