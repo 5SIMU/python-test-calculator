@@ -1,17 +1,27 @@
 pipeline {
     agent any
-    stages{
-        stage('version') {
+    
+    stages {
+        stage('Checkout') {
             steps {
-                sh 'python3 --version'
+                // Checkout your source code from the repository
+                // Replace the placeholder with your actual repository URL
+                git 'https://github.com/5SIMU/python-test-calculator.git'
             }
         }
-        stage("Test Simo") {
+        
+        stage('Install Dependencies') {
             steps {
-                sh 'python3 tests/test_addition.py'
+                // Install required Python packages
+                sh 'pip install -r requirements.txt'
             }
-            
+        }
+        
+        stage('Run Tests') {
+            steps {
+                // Run pytest with Selenium tests
+                sh 'pytest'
+            }
         }
     }
-    
 }
