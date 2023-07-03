@@ -13,8 +13,10 @@ import time
 def test_setup():
     service_object = Service(binary_path)
     global driver
+    PROXY = "localhost:3128"
     chrome_options = Options()
     #chrome_options.add_argument("--headless")
+    chrome_options.add_argument('--proxy-server=%s' % PROXY)
     chrome_options.add_argument("--ignore-certificate-errors")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")

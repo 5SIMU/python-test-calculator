@@ -10,6 +10,7 @@ driverService = Service('C:\\5SIMU\\python-test-calculator\\WebDriver\\geckodriv
 driver = webdriver.Firefox(service=driverService, options=option)
 
 def test_simo():
+
     driver.get("https://docs.pytest.org/en/7.3.x/")
     searchField = driver.find_element(By.NAME, "q")
     searchField.send_keys("test")
