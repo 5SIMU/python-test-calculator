@@ -36,7 +36,8 @@ def test_add_string():
     with pytest.raises(TypeError):
         add("string", 4)
 def test_SMDB(test_setup):
-    driver.get("https://docs.pytest.org/en/7.3.x/")
+    #driver.get("https://docs.pytest.org/en/7.3.x/")
+    driver.get("http://localhost:8080")
     searchField = driver.find_element(By.NAME, "q")
     searchField.send_keys("test")
     searchField.send_keys(Keys.ENTER)
