@@ -1,11 +1,23 @@
-FROM python:3.6-slim
+FROM ubuntu:latest
 
-COPY . /python-test-calculator
+# Set proxy environment variables if necessary
+ENV HTTP_PROXY http://rb-proxy-de.bosch.com:8080
+ENV HTTPS_PROXY http://rb-proxy-de.bosch.com:8080
 
+# Install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    python \
+    python-pip \
+    firefox
+
+# Set the working directory
 WORKDIR /python-test-calculator
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy the project files to the working directory
+COPY . /python-test-calculator
 
-RUN ["pytest", "-v", "--junitxml=reports/result.xml"]
+# Install the required packages
+RUN pip3 install -r requirements.txt
 
-CMD tail -f /dev/null
+# Run pytest
+CMD ["pytest"]
