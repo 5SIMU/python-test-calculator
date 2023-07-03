@@ -16,7 +16,8 @@ def test_setup():
     PROXY = "localhost:3128"
     chrome_options = Options()
     #chrome_options.add_argument("--headless")
-    chrome_options.add_argument('--proxy-server=%s' % PROXY)
+    #chrome_options.add_argument('--proxy-server=%s' % PROXY)
+    chrome_options.add_argument(f'--proxy-server={PROXY }')
     chrome_options.add_argument("--ignore-certificate-errors")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
@@ -36,8 +37,8 @@ def test_add_string():
     with pytest.raises(TypeError):
         add("string", 4)
 def test_SMDB(test_setup):
-    #driver.get("https://docs.pytest.org/en/7.3.x/")
-    driver.get("http://localhost:8080")
+    driver.get("https://docs.pytest.org/en/7.3.x/")
+    #driver.get("http://localhost:8080")
     searchField = driver.find_element(By.NAME, "q")
     searchField.send_keys("test")
     searchField.send_keys(Keys.ENTER)
