@@ -16,7 +16,7 @@ services:
     build:
       context: .
     volumes:
-      - .:/app
+      - .:/python-test-calculator
     depends_on:
       - firefox-node
       - chrome-node

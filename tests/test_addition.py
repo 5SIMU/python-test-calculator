@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.options import Options
 import pytest
 import time
 
+
 @pytest.fixture()
 def test_setup():
     service_object = Service(binary_path)
@@ -17,7 +18,7 @@ def test_setup():
     chrome_options = Options()
     #chrome_options.add_argument("--headless")
     #chrome_options.add_argument('--proxy-server=%s' % PROXY)
-    chrome_options.add_argument(f'--proxy-server={PROXY }')
+    #chrome_options.add_argument(f'--proxy-server={PROXY }')
     chrome_options.add_argument("--ignore-certificate-errors")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-gpu")
@@ -37,7 +38,9 @@ def test_add_string():
     with pytest.raises(TypeError):
         add("string", 4)
 def test_SMDB(test_setup):
+    time.sleep(10)
     driver.get("https://docs.pytest.org/en/7.3.x/")
+    time.sleep(10)
     #driver.get("http://localhost:8080")
     searchField = driver.find_element(By.NAME, "q")
     searchField.send_keys("test")

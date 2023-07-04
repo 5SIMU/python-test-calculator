@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="7" time="11.807" timestamp="2023-07-03T12:17:03.871206" hostname="CLJ-C-002NC"><testcase classname="tests.test_addition" name="test_add" file="tests\test_addition.py" line="31" time="0.001" /><testcase classname="tests.test_addition" name="test_add_string" file="tests\test_addition.py" line="34" time="0.001" /><testcase classname="tests.test_addition" name="test_SMDB" file="tests\test_addition.py" line="37" time="3.603"><failure message="selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED&#10;  (Session info: chrome=114.0.5735.134)&#10;Stacktrace:&#10;Backtrace:&#10;&#09;GetHandleVerifier [0x0116A813+48355]&#10;&#09;(No symbol) [0x010FC4B1]&#10;&#09;(No symbol) [0x01005358]&#10;&#09;(No symbol) [0x01001B33]&#10;&#09;(No symbol) [0x00FF8CA5]&#10;&#09;(No symbol) [0x00FF9D0A]&#10;&#09;(No symbol) [0x00FF9003]&#10;&#09;(No symbol) [0x00FF8355]&#10;&#09;(No symbol) [0x00FF82EC]&#10;&#09;(No symbol) [0x00FF6F26]&#10;&#09;(No symbol) [0x00FF7688]&#10;&#09;(No symbol) [0x01006B52]&#10;&#09;(No symbol) [0x0105CF01]&#10;&#09;(No symbol) [0x0104A73C]&#10;&#09;(No symbol) [0x0105C922]&#10;&#09;(No symbol) [0x0104A536]&#10;&#09;(No symbol) [0x010282DC]&#10;&#09;(No symbol) [0x010293DD]&#10;&#09;GetHandleVerifier [0x013CAABD+2539405]&#10;&#09;GetHandleVerifier [0x0140A78F+2800735]&#10;&#09;GetHandleVerifier [0x0140456C+2775612]&#10;&#09;GetHandleVerifier [0x011F51E0+616112]&#10;&#09;(No symbol) [0x01105F8C]&#10;&#09;(No symbol) [0x01102328]&#10;&#09;(No symbol) [0x0110240B]&#10;&#09;(No symbol) [0x010F4FF7]&#10;&#09;BaseThreadInitThunk [0x755800C9+25]&#10;&#09;RtlGetAppContainerNamedObjectPath [0x77557B4E+286]&#10;&#09;RtlGetAppContainerNamedObjectPath [0x77557B1E+238]">test_setup = None
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="7" time="21.380" timestamp="2023-07-03T14:28:22.354374" hostname="CLJ-C-002NC"><testcase classname="tests.test_addition" name="test_add" file="tests\test_addition.py" line="32" time="0.001" /><testcase classname="tests.test_addition" name="test_add_string" file="tests\test_addition.py" line="35" time="0.000" /><testcase classname="tests.test_addition" name="test_SMDB" file="tests\test_addition.py" line="38" time="13.609"><failure message="selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED&#10;  (Session info: chrome=114.0.5735.134)&#10;Stacktrace:&#10;Backtrace:&#10;&#09;GetHandleVerifier [0x0116A813+48355]&#10;&#09;(No symbol) [0x010FC4B1]&#10;&#09;(No symbol) [0x01005358]&#10;&#09;(No symbol) [0x01001B33]&#10;&#09;(No symbol) [0x00FF8CA5]&#10;&#09;(No symbol) [0x00FF9D0A]&#10;&#09;(No symbol) [0x00FF9003]&#10;&#09;(No symbol) [0x00FF8355]&#10;&#09;(No symbol) [0x00FF82EC]&#10;&#09;(No symbol) [0x00FF6F26]&#10;&#09;(No symbol) [0x00FF7688]&#10;&#09;(No symbol) [0x01006B52]&#10;&#09;(No symbol) [0x0105CF01]&#10;&#09;(No symbol) [0x0104A73C]&#10;&#09;(No symbol) [0x0105C922]&#10;&#09;(No symbol) [0x0104A536]&#10;&#09;(No symbol) [0x010282DC]&#10;&#09;(No symbol) [0x010293DD]&#10;&#09;GetHandleVerifier [0x013CAABD+2539405]&#10;&#09;GetHandleVerifier [0x0140A78F+2800735]&#10;&#09;GetHandleVerifier [0x0140456C+2775612]&#10;&#09;GetHandleVerifier [0x011F51E0+616112]&#10;&#09;(No symbol) [0x01105F8C]&#10;&#09;(No symbol) [0x01102328]&#10;&#09;(No symbol) [0x0110240B]&#10;&#09;(No symbol) [0x010F4FF7]&#10;&#09;BaseThreadInitThunk [0x755800C9+25]&#10;&#09;RtlGetAppContainerNamedObjectPath [0x77557B4E+286]&#10;&#09;RtlGetAppContainerNamedObjectPath [0x77557B1E+238]">test_setup = None
 
     def test_SMDB(test_setup):
+        time.sleep(10)
 &gt;       driver.get("https://docs.pytest.org/en/7.3.x/")
 
-tests\test_addition.py:39: 
+tests\test_addition.py:41: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 Lib\site-packages\selenium\webdriver\remote\webdriver.py:355: in get
     self.execute(Command.GET, {"url": url})
@@ -11,7 +12,7 @@ Lib\site-packages\selenium\webdriver\remote\webdriver.py:346: in execute
     self.error_handler.check_response(response)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000199CAF42C10&gt;
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002B74991FCD0&gt;
 response = {'status': 500, 'value': '{"value":{"error":"unknown error","message":"unknown error: net::ERR_NAME_NOT_RESOLVED\\n  (...\n\\tRtlGetAppContainerNamedObjectPath [0x77557B4E+286]\\n\\tRtlGetAppContainerNamedObjectPath [0x77557B1E+238]\\n"}}'}
 
     def check_response(self, response: Dict[str, Any]) -&gt; None:
@@ -193,12 +194,11 @@ E       	BaseThreadInitThunk [0x755800C9+25]
 E       	RtlGetAppContainerNamedObjectPath [0x77557B4E+286]
 E       	RtlGetAppContainerNamedObjectPath [0x77557B1E+238]
 
-Lib\site-packages\selenium\webdriver\remote\errorhandler.py:245: WebDriverException</failure></testcase><testcase classname="tests.test_backend" name="test_verify_status_code" file="tests\test_backend.py" line="8" time="0.001" /><testcase classname="tests.test_backend" name="test_verify_body_message" file="tests\test_backend.py" line="12" time="0.000" /><testcase classname="tests.test_backend" name="test_verify_header_content" file="tests\test_backend.py" line="16" time="0.000" /><testcase classname="tests.test_ui" name="test_simo" file="tests\test_ui.py" line="11" time="0.094"><failure message="selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//docs.pytest.org/en/7.3.x/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20docs.pytest.org.&#10;Stacktrace:&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:186:5&#10;UnknownError@chrome://remote/content/shared/webdriver/Errors.jsm:513:5&#10;checkReadyState@chrome://remote/content/marionette/navigate.js:65:24&#10;onNavigation@chrome://remote/content/marionette/navigate.js:333:39&#10;emit@resource://gre/modules/EventEmitter.jsm:160:20&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25">def test_simo():
-    
+Lib\site-packages\selenium\webdriver\remote\errorhandler.py:245: WebDriverException</failure></testcase><testcase classname="tests.test_backend" name="test_verify_status_code" file="tests\test_backend.py" line="8" time="0.000" /><testcase classname="tests.test_backend" name="test_verify_body_message" file="tests\test_backend.py" line="12" time="0.000" /><testcase classname="tests.test_backend" name="test_verify_header_content" file="tests\test_backend.py" line="16" time="0.000" /><testcase classname="tests.test_ui" name="test_simo" file="tests\test_ui.py" line="13" time="0.099"><failure message="selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//docs.pytest.org/en/7.3.x/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20docs.pytest.org.&#10;Stacktrace:&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:186:5&#10;UnknownError@chrome://remote/content/shared/webdriver/Errors.jsm:513:5&#10;checkReadyState@chrome://remote/content/marionette/navigate.js:65:24&#10;onNavigation@chrome://remote/content/marionette/navigate.js:333:39&#10;emit@resource://gre/modules/EventEmitter.jsm:160:20&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25">def test_simo():
     
 &gt;       driver.get("https://docs.pytest.org/en/7.3.x/")
 
-tests\test_ui.py:15: 
+tests\test_ui.py:16: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 Lib\site-packages\selenium\webdriver\remote\webdriver.py:355: in get
     self.execute(Command.GET, {"url": url})
@@ -206,7 +206,7 @@ Lib\site-packages\selenium\webdriver\remote\webdriver.py:346: in execute
     self.error_handler.check_response(response)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000199C9CAC2D0&gt;
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002B74A3B5510&gt;
 response = {'status': 500, 'value': '{"value":{"error":"unknown error","message":"Reached error page: about:neterror?e=dnsNotFoun...tEmitter.jsm:160:20\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25\\n"}}'}
 
     def check_response(self, response: Dict[str, Any]) -&gt; None:
